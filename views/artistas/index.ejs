@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= artista ? 'Editar Artista' : 'Adicionar Artista' %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1><%= artista ? 'Editar Artista' : 'Adicionar Artista' %></h1>
+
+    <form action="<%= artista ? '/artistas/' + artista.id + '/edit' : '/artistas/create' %>" method="POST">
+      <label for="nome">Nome do Artista</label>
+      <input type="text" id="nome" name="nome" value="<%= artista ? artista.nome : '' %>" required>
+
+      <label for="generoMusical">Gênero Musical</label>
+      <input type="text" id="generoMusical" name="generoMusical" value="<%= artista ? artista.generoMusical : '' %>" required>
+
+      <label for="discos">Discos Participados</label>
+      <select id="discos" name="discos" multiple>
+        <% discos.forEach(disco => { %>
+          <option value="<%= disco.id %>" <% if (artista && artista.Discos.some(d => d.id === disco.id)) { %> selected <% } %>>
+            <%= disco.titulo %>
+          </option>
+        <% }) %>
+      </select>
+
+      <button type="submit">Salvar</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  /* Estilo para os formulários */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Estilo para listas de itens (discos, artistas, gêneros) */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  li h3 {
+    font-size: 1.2rem;
+  }
+  
+  li p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  /* Links */
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Container principal */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Reset básico para garantir que as margens e paddings sejam consistentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo para o título da página */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Container geral da lista de discos */
+.discos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* Cartões de discos */
+.disco-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* Efeito de hover no cartão de disco */
+.disco-card:hover {
+    transform: scale(1.05);
+}
+
+/* Capa do disco */
+.disco-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+/* Informações do disco */
+.disco-info {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Título do disco */
+.disco-info h3 {
+    font-size: 22px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Ano de lançamento */
+.disco-info p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* Estilo de link */
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Estilo de botão, se houver (para adicionar novos discos, por exemplo) */
+.add-disco-btn {
+    display: block;
+    margin: 30px auto 0;
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-disco-btn:hover {
+    background-color: #27ae60;
+}
+
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .discos-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .discos-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .discos-list li h3 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .discos-list li p {
+    margin: 5px 0;
+  }
+  
+  .create-button {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .create-button .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+  }
+  
+  .create-button .btn:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,39 @@
+<!-- views/discos/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Discos</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Catálogo de Discos</h1>
+
+    <!-- Lista de Discos -->
+    <div class="discos-list">
+      <% if (discos.length > 0) { %>
+        <ul>
+          <% discos.forEach(disco => { %>
+            <li>
+              <h3><%= disco.titulo %></h3>
+              <p><strong>Artista:</strong> <%= disco.artista.nome %></p>
+              <p><strong>Ano de Lançamento:</strong> <%= disco.ano %></p>
+              <p><strong>Gênero:</strong> <%= disco.genero %></p>
+            </li>
+          <% }); %>
+        </ul>
+      <% } else { %>
+        <p>Não há discos cadastrados.</p>
+      <% } %>
+    </div>
+
+    <!-- Botão para Criar Novo Disco -->
+    <div class="create-button">
+      <a href="/discos/criar" class="btn">Criar Novo Disco</a>
+    </div>
+  </div>
+</body>
+</html>

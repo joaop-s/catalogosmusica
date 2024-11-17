@@ -1,0 +1,12 @@
+<%- include('../layouts/header') %>
+<h2><%= disco ? 'Editar Disco' : 'Adicionar Disco' %></h2>
+<form action="<%= disco ? '/discos/' + disco.id + '/edit' : '/discos/create' %>" method="POST">
+  <label for="titulo">Título:</label>
+  <input type="text" id="titulo" name="titulo" value="<%= disco ? disco.titulo : '' %>" required>
+  
+  <label for="anoLancamento">Ano de Lançamento:</label>
+  <input type="number" id="anoLancamento" name="anoLancamento" value="<%= disco ? disco.anoLancamento : '' %>" required>
+  
+  <button type="submit"><%= disco ? 'Atualizar' : 'Adicionar' %></button>
+</form>
+<%- include('../layouts/footer') %>

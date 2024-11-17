@@ -1,0 +1,9 @@
+<%- include('../layouts/header') %>
+<h2><%= artista ? 'Editar Artista' : 'Adicionar Artista' %></h2>
+<form action="<%= artista ? '/artistas/' + artista.id + '/edit' : '/artistas/create' %>" method="POST">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" value="<%= artista ? artista.nome : '' %>" required>
+  
+  <button type="submit"><%= artista ? 'Atualizar' : 'Adicionar' %></button>
+</form>
+<%- include('../layouts/footer') %>
